@@ -12,6 +12,6 @@ jobs:
   call-build:
     uses: LunatigTV/workflows/.github/workflows/build-and-push-docker-image.yml@main
     with:
-      project_name: 'faibot'
+      project_name: 'vod-exporter'
     secrets:
       DEPLOYMENT_REPO_PAT: ${{ secrets.DEPLOYMENT_REPO_PAT }}
