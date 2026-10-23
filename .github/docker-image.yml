@@ -1,0 +1,15 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  call-build:
+    uses: LunatigTV/workflows/.github/workflows/build-and-push-docker-image.yml@main
+    with:
+      project_name: 'vod-exporter'
