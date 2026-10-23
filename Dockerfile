@@ -1,5 +1,5 @@
 # --- Stage 1: Build TypeScript & Dependencies ---
-FROM node:20-bookworm-slim AS builder
+FROM node:24-bookworm-slim AS builder
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ RUN npm run build
 RUN npm prune --omit=dev && npm cache clean --force
 
 # --- Stage 2: Minimal Runtime ---
-FROM node:20-bookworm-slim AS runner
+FROM node:24-bookworm-slim AS runner
 
 WORKDIR /app
 
