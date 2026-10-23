@@ -12,7 +12,6 @@ RUN npm run build
 # Strip devDependencies and purge npm cache
 RUN npm prune --omit=dev && npm cache clean --force
 
-
 # --- Stage 2: Minimal Runtime ---
 FROM node:20-bookworm-slim AS runner
 
